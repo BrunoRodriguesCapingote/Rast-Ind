@@ -1,9 +1,9 @@
-from Control.Factory.Indentificacao import Indentificacao
+from Control.Factory.Identificacao import Identificacao
 
 
 class Factory:
     def __init__(self):
         pass
 
-    def get_fac_indentificacao(self):
-        return Indentificacao(nome='Indentificacao de Objetos', estado=1)
+    def get_indentificacao(self) -> Identificacao:
+        return Identificacao(nome='Identificação De Objeto', estado=1)

@@ -1,7 +1,5 @@
 class Processo:
-    def __init__(self, nome, estado):
+    def __init__(self,nome:str,estado:int):
         self.nome = nome
         self.estado = estado
 
-    def executar(self,Model,View):
-        pass

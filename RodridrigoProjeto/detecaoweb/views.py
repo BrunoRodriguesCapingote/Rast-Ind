@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, StreamingHttpResponse
 from django.views.decorators import gzip
 import cv2
-from detecaoweb.Ras&Ind import Control
+from Rast&Ind.Control import Control
 
 
 def index(request):
