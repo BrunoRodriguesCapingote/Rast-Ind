@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse, StreamingHttpResponse
 from django.views.decorators import gzip
 import cv2
-from Rast_Ind import Control
+from Rast_Ind.Control import Control
 
 
 def index(request):

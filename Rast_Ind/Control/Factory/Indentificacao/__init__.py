@@ -1,4 +1,4 @@
-from Control.Factory.Processo import Processo
+from Rast_Ind.Control.Factory.Processo import Processo
 
 
 class Indentificacao(Processo):

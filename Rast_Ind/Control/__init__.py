@@ -1,8 +1,8 @@
 from Rast_Ind.Control.Factory import Factory
-from Motor import Motor
-from Model import Model
-from View import View
-from BitSet import BitSet
+from Rast_Ind.Motor import Motor
+from Rast_Ind.Model import Model
+from Rast_Ind.View import View
+from Rast_Ind.BitSet import BitSet
 
 
 class Control:
@@ -14,10 +14,11 @@ class Control:
         self.model = Model()
         self.pack_image = None
         self.operation: int = 0
-    def ativar_rastreamento(self,operacao:int)->None:
+
+    def ativar_rastreamento(self, operacao: int) -> None:
         self.operation = 1
 
-    def set_image_pack(self,image_pack:list)->None:
+    def set_image_pack(self, image_pack: list) -> None:
         self.pack_image = image_pack
 
     def iniciar_sistema(self):

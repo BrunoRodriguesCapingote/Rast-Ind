@@ -1,5 +1,5 @@
-from View.VwIndenificacao import VwIndentificacao
-from View.VwMotor import VwMotor
+from Rast_Ind.View.VwIndenificacao import VwIndentificacao
+from Rast_Ind.View.VwMotor import VwMotor
 
 
 class View:

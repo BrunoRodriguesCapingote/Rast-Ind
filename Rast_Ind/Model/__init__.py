@@ -1,4 +1,4 @@
-from Model.MdIndentificacao import MdIndentificacao
+from Rast_Ind.Model.MdIndentificacao import MdIndentificacao
 
 
 class Model:

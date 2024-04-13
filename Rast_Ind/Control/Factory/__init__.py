@@ -1,4 +1,4 @@
-from Control.Factory.Indentificacao import Indentificacao
+from Rast_Ind.Control.Factory.Indentificacao import Indentificacao
 
 
 class Factory:
