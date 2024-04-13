@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse, StreamingHttpResponse
 from django.views.decorators import gzip
 import cv2
@@ -26,9 +26,10 @@ def capturador_de_frames():
             break
         elif data_pack.__len__() <= 13:
             rast_ind_control = Control()
-            rast_ind_control.set_operacao(operacao=0)
+            rast_ind_control.ativar_rastreamento(operacao=1)
             rast_ind_control.set_image_pack(image_pack=data_pack)
             rast_ind_control.iniciar_operacao()
+            return redirect('item_data')
 
         else:
             ret, buffer = cv2.imencode('.jpg', frame)
