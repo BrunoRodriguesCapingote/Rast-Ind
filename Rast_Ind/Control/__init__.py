@@ -1,4 +1,4 @@
-from Control.Factory import Factory
+from Rast_Ind.Control.Factory import Factory
 from Motor import Motor
 from Model import Model
 from View import View
