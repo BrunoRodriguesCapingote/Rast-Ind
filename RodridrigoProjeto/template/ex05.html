@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exemplo vue js</title>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <div id="app-4">
+        <ol>
+          <li v-for="item in vetor">
+            {{ item.text }}
+          </li>
+        </ol>
+    </div>
+
+	
+	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+	<script>
+        var app4 = new Vue({
+        el: '#app-4',
+        data: {
+            vetor: [
+            { text: 'Aprender JavaScript' },
+            { text: 'Aprender Vue' },
+            { text: 'Criar algo incrível' },
+			      { text: 'Viajar'},
+            { text: 'Estudar química'}
+            ]
+        }
+        })
+    </script>    
+  </body>
+</html>

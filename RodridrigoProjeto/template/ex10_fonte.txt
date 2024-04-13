@@ -1,0 +1,1 @@
+Matos, Tiago. Aula 3 - Vue js diretivas v-if, v-show e v-else Vue js, as mais utilizadas. Disponível em <https://www.youtube.com/watch?v=mbJh9jrc_20&list=PLcoYAcR89n-qq1vGRbaUiV6Q9puy0qigW&index=3>. Acessado em 22/8/2022

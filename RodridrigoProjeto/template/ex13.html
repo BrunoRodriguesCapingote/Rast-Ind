@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exemplo vue js</title>
+    <meta charset="utf-8">
+    <style media="screen">
+        .red{
+            color:red
+        }
+        .green{
+            color:green
+        }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+        <h1> {{titulo}} </h1>
+        <img v-bind:src="imagem" v-bind:alt="alt">
+
+        <img :src="imagem" :alt="alt">
+
+        <p v-bind:class="classX">{{alt}}. Um texto por aqui</p>
+
+    </div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+	<script>
+        var app = new Vue({
+            el: "#app",
+            data:{
+                titulo: "Aula de Vue Js!",
+                imagem: "https://discoveredn-18cc7.kxcdn.com/wp-content/uploads/2021/05/Blog-vijgentips.jpg",
+                alt: "Vue Js para todos",
+                classX: "red"
+            }
+        })
+    </script>    
+    
+  </body>
+</html>

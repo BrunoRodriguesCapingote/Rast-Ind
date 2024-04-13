@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>RecIntegraTech</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<div id="app" class="content text-right">
+    <label>Codigo de estoque: [[ codigo_item ]]</label><br><br>
+    <label>Nome Tecnico:<h3><strong>[[ nome_item ]]</strong></h3></label><br><br>
+    <label>Modelo: [[ modelo ]]</label><br><br>
+    <label>Especificações Tecnicas: [[ esp_tecnicas }</label><br><br>
+    <label>Aplicabilidade: [[ aplicabilidade ]]</label><br><br>
+    <label>Data de Fabricação: [[ data_fabricacao ]]</label><br><br>
+    <label>Fabricante: [[ fabricante ]]</label><br><br>
+    <label>Origem/Procedencia: [[ org_procedencia ]]</label><br><br>
+    <br>
+    <hr>
+</div>
+<div class="container text-center">
+    <div class="row justify-center">
+        <div class="col">
+            <form action='indentificacao/' method="get">
+                <button type="submit" class="btn btn-outline-secondary">Fazer novo reconhecimento</button>
+            </form>
+        </div>
+        <div class="col">
+            Sistema de Reconhecimento dos itens do museu
+        </div>
+        <div class="col">
+            <form action='/' method="get">
+                <button type="submit" class="btn btn-outline-dark">Pagina Principal</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        delimiters: ['[[', ']]'],
+        data:{
+            codigo_item: "#0000",
+            nome_item: "MC-1000",
+            esp_tecnicas: "processador Intl I9",
+            aplicabilidade: "Para usar",
+            data_fabricacao: "1500",
+            fabricante: "Produto advindo de Pedro Alves Cabral",
+            org_procedencia: "Antigo Imperio Portugues no Brasil",
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exemplo vue js</title>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <div id="app">
+        <h1> {{titulo}} </h1>
+        <div v-if="usuario.id == 1">
+            Id: {{usuario.id}}, <br>
+            Nome: {{usuario.nome}}, <br>
+            Profissão: {{usuario.profissao}} <br>
+        </div>
+        <h3 v-else>Nenhum Usuário</h3>
+    
+
+        <h1> {{titulo}} </h1>
+
+        <div v-if="usuario2.nome == 'Mariana'">
+            Id: {{usuario2.id}}, <br>
+            Nome: {{usuario2.nome}}, <br>
+            Profissão: {{usuario2.profissao}} <br>
+        </div>
+        <h3 v-else>Nenhum Usuário</h3>
+    </div>
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+	<script>
+        var app = new Vue({
+            el: "#app",
+            data:{
+                titulo: "Aula de Vue Js!",
+                usuario : {
+                    id : 1,
+                    nome : "João da Silva",
+                    profissao : "Ator"
+                }, 
+                usuario2 : {
+                    id : 2,
+                    nome : "Mariana",
+                    profissao : "Analista de Sistemas"
+                }
+            }
+        })
+    </script>    
+    
+  </body>
+</html>

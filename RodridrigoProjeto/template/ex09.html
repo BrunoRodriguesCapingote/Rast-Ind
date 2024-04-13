@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exemplo vue js</title>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <div id="app">
+        <p> {{foo}} </p>
+        <!-- não irá atualizar mais o `foo`! -->
+        <button v-on:click="foo = 'amora'">Change it</button>
+    </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+	<script>
+        var obj = {
+            foo: 'barra de tarefas'
+        }
+
+        //comentar e descomentar aqui
+        Object.freeze(obj)
+
+        new Vue({
+            el: '#app',
+            data: obj
+        })
+    </script>    
+    
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exemplo vue js</title>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <div id="app">
+        <h1> {{titulo}} </h1>
+        <ul>
+            <li v-for="cachorro in linguagens">{{cachorro}}</li>
+        </ul>
+
+        <h1> New Example </h1>
+        <ul>
+            <li v-for="xpto in linguagens">{{xpto.nome}}</li>
+        </ul>
+
+        <h1> New Example </h1>
+        <ul>
+            <li v-for="(xpto, index) in linguagens">{{index+1}} - {{xpto.nome}}</li>
+        </ul>
+
+
+    </div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+	<script>
+        var app = new Vue({
+            el: "#app",
+            data:{
+                titulo: "Aula de Vue Js!",
+                linguagens: [
+                    {nome: "Javascript"},
+                    {nome: "PHP"},
+                    {nome: "C"},
+                    {nome: "C#"},
+                    {nome: "Python"},
+                    {nome: "Assembly"}
+                ] 
+            }
+        })
+    </script>    
+    
+  </body>
+</html>

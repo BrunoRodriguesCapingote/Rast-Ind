@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <meta charset="utf-8" />
+    <script src=
+"https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js">
+    </script>
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js">
+    </script>
+    
+    
+</head>
+  
+<body>
+    <div id="app-vue">
+                <table>
+                    <tr>
+                    <th>Id</th>
+                    <th>name</th>
+                    </tr>
+                
+                    <tr v-for="(venda,i) in vendas" :key="i">
+                        <td>{{ venda.id }}</td> 
+                        <td>{{ venda.name }}</td>  
+                    </tr>
+                </table>
+    </div>
+  
+    <script>
+        new Vue({
+            el: '#app-vue',
+            data() {
+                return {
+                    vendas: null
+                }
+            },
+            created() {
+                this.vendas = null
+                axios.get( 'http://localhost/aulas/sisvendas1/teste1.php')
+                    .then(response => {
+                        this.vendas = response.data
+                    })
+            }
+        });
+    </script>
+</body>
+  
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Exemplo vue js</title>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <div id="app-3">
+        <p v-if="seen">Agora você me viu</p>
+    </div>
+
+	  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+	  <script>
+        var app3 = new Vue({
+        el: '#app-3',
+        data: {
+            seen: true
+        }
+        })
+    </script>    
+    
+  </body>
+</html>
