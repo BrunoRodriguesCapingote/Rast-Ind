@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, StreamingHttpResponse
 from django.views.decorators import gzip
 import cv2
-from Rast&Ind.Control import Control
+from Rast_Ind import Control
 
 
 def index(request):
@@ -14,17 +14,24 @@ def item_data(request):
 
 
 def indentificacao(request):
-    return StreamingHttpResponse(gen_frames(), content_type="multipart/x-mixed-replace;boundary=frame")
+    return StreamingHttpResponse(capturador_de_frames(), content_type="multipart/x-mixed-replace;boundary=frame")
 
 
-def gen_frames():
+def capturador_de_frames():
+    data_pack: list = list()
     camera = cv2.VideoCapture(0)
     while True:
         success, frame = camera.read()
         if not success:
             break
+        elif data_pack.__len__() <= 13:
+            rast_ind_control = Control()
+            rast_ind_control.set_operacao(operacao=0)
+            rast_ind_control.set_image_pack(image_pack=data_pack)
+            rast_ind_control.iniciar_operacao()
+
         else:
             ret, buffer = cv2.imencode('.jpg', frame)
+            data_pack.append(frame)
             frame = buffer.tobytes()
-            yield (b'--frame\r\n'
-                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+            yield (b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
